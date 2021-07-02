@@ -13,8 +13,9 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ClarityModule } from '@clr/angular';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { RegistraionComponent } from './registraion/registraion.component';
+
 import { MatButtonModule } from '@angular/material/button';
+import { RegistraionComponent } from './Pages/registraion/registraion.component';
 
 
 

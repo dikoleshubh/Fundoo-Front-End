@@ -1,0 +1,81 @@
+  
+<div class="container">
+    <div class="container__left">
+      <h2>
+        <span class="logo f">F</span><span class="logo u">u</span>
+  
+        <span class="logo n">n</span><span class="logo d">d</span
+        ><span class="logo o">o</span><span class="logo o">o</span>
+      </h2>
+      <h2 class="md-headline">Create your FunDooNotes Account</h2>
+  
+      <form class="container__form" [formGroup]="form" (ngSubmit)="submit()">
+        <div class="form__first-row">
+          <p>
+            <mat-form-field appearance="outline">
+              <mat-label>First Name</mat-label>
+              <input matInput autocomplete="off" formControlName="firstName" />
+              <mat-error *ngIf="form.controls.firstName.errors"
+                >*Enter First Name</mat-error
+              >
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Last Name</mat-label>
+              <input matInput autocomplete="off" formControlName="lastName" />
+              <mat-error *ngIf="form.controls.lastName.errors"
+                >*Enter Last Name</mat-error
+              >
+            </mat-form-field>
+          </p>
+        </div>
+        <div class="form__second-row">
+          <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Email</mat-label>
+              <input matInput autocomplete="off" formControlName="email" />
+              <mat-error *ngIf="form.controls.email.errors"
+                >*Choose a email address</mat-error
+              >
+              <span matSuffix>@gmail.com</span>
+              <mat-hint>You can use letters, numbers & periods</mat-hint>
+            </mat-form-field>
+          </p>
+        </div>
+        <div class="form__first-row">
+          <p>
+            <mat-form-field appearance="outline">
+              <mat-label>Password</mat-label>
+              <input matInput type = "password" autocomplete="off" formControlName="password" />
+              <mat-error *ngIf="form.controls.password.errors"
+                >*Enter a password</mat-error
+              >
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+              <mat-label>Confirm Password</mat-label>
+              <input matInput type = "password" autocomplete="off" />
+            </mat-form-field>
+          </p>
+        </div>
+        <mat-hint
+          >Use 8 or more characters with a mix of letters, numbers &
+          symbols</mat-hint
+        >
+  
+        <div class="container__checkbox">
+          <span
+            >
+            <!-- <input matInput #password [type]= "toggle.type"> -->
+            <!-- <mat-checkbox #password class="example-margin" color="primary" 
+              >Show Password
+            </mat-checkbox> -->
+            <mat-checkbox color="primary" #password class="example-margin"  >Show password</mat-checkbox>
+          </span>
+        </div>
+        <div class="container__buttons">
+            <button mat-raised-button color="primary"><a routerLink="/login">Sign in instead</a></button>
+          <button mat-raised-button color="primary">Next</button>
+        </div>
+      </form>
+    </div>
+    
+  </div>
