@@ -4,6 +4,7 @@ import {MatSnackBar, MatSnackBarConfig} from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 
 
+
 import { UserserviceService } from 'src/app/Services/user/user.service';
 
 
@@ -16,7 +17,7 @@ export class LoginComponent implements OnInit {
 
   public isActive: boolean;
   loginForm:FormGroup
-  public Email: string = '@gmail.com';
+  public Email: string = '.com';
  
  
   constructor(private FormBuilder:FormBuilder,private Userservice:UserserviceService,

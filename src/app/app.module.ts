@@ -16,6 +16,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { MatButtonModule } from '@angular/material/button';
 import { RegistraionComponent } from './Pages/registraion/registraion.component';
+//import { RegistersComponent } from './registers/registers.component';
 
 
 
@@ -26,6 +27,7 @@ import { RegistraionComponent } from './Pages/registraion/registraion.component'
     AppComponent,
     LoginComponent,
     RegistraionComponent
+    //RegistersComponent
     
   ],
   imports: [

@@ -22,10 +22,10 @@ body {
 //     justify-content: flex-end;
 // }
 .md-submitbtn.md-raised {
-  box-shadow: 0 2px 5px 0 rgb(2, 1, 1);
+  box-shadow: 0 2px 5px 0 rgb(41, 40, 40);
 }
 a{
-  color: #000000;
+  color: #fffbfb;
   font-size: inherit;
   font-family: "Google Sans",Roboto,Arial,sans-serif;
   letter-spacing: .0107142857em;
@@ -43,7 +43,7 @@ a{
 .container{
   display: flex;
   flex-direction: column;
-  border: 1px solid #f5f7fc;
+  border: 1px solid #c6c7ca;
   background: rgba(250, 250, 250, 0.979);
   border-radius: 7px;
   width: 400px;
@@ -54,6 +54,7 @@ a{
     min-height: 450px;
     align-content: center;
 }
+
 .use{
   color: #202124;
   font-size: 16px;
@@ -102,7 +103,7 @@ mat-form-field{
   color: #234aa5;
 }
 .signin{
-  color: #234aa5;
+  color: #326aee;
   padding-top: 16px;
   font-family: 'Google Sans','Noto Sans Myanmar UI',arial,sans-serif;
   font-size: 24px;
@@ -126,4 +127,25 @@ mat-form-field{
 
 ::ng-deep .mat-snack-bar-container{
   min-width: 210px !important;
+}
+//Mat Box border Appearence
+::ng-deep {
+  .mat-form-field-appearance-outline .mat-form-field-outline {
+     color: rgb(156, 154, 154);
+  }
+  mat-form-field {
+     .mat-hint, input, ::placeholder, .mat-form-field-label  {
+        color: rgb(156, 154, 154);
+     }
+  }
+  //Mat check box appearence
+  .mat-checkbox-checked.mat-accent .mat-checkbox-background,
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+  background-color: #f5f6fa;
+  color: #0e0d0d;
+}
+.mat-checkbox-frame {
+  border-color: #c2c2c2;
+}
+
 }

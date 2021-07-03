@@ -14,13 +14,15 @@
 
   </div>
   <div class="child signin">
-    <span>Sign in</span>
+    <mat-card-title>
+      Sign up
+    </mat-card-title>
   </div>
   <div class="child use">
     <!-- <span class="md-caption">Caption</span> -->
     <!-- <md-button>Use your FunDooNotes Account</md-button> -->
     <!-- <p class="md-body-3"></p> -->
-    <h2 class="md-headline">Use your FunDooNotes Account</h2>
+    <h2 class="md-headline">Use your FunDoo  Notes Account</h2>
   </div>
   
   <form [formGroup]="loginForm" class="child loginForm" (ngSubmit)="loginForm.valid && login()">
@@ -28,13 +30,13 @@
         <div class="Email">
           <mat-form-field class="user" appearance="outline">
             <mat-label >Email</mat-label>
-            <input matInput placeholder="" formControlName="Email">
+            <input name="Email" matInput placeholder="It's Email" formControlName="Email" type="">
             
             <span class="input-suffix" matSuffix >.com</span>
-            <mat-error *ngIf="loginForm.hasError('required', 'Email')">
+            <mat-error align= "start" *ngIf="loginForm.hasError('required', 'Email')">
               *Required
             </mat-error>
-            <mat-hint>You can use letters, numbers & periods</mat-hint>
+            <mat-hint>Eg. xyz@email</mat-hint>
           </mat-form-field>
         </div>
         <div class="Password">
@@ -58,7 +60,7 @@
         <div class="btns">
           <div class="create">
           
-            <button type="submit" mat-raised-button  [routerLink]="['/registraion']">Create account</button>
+            <button type="submit" mat-raised-button  ><a routerLink="/registraion">Create account </a></button>
           
           
           </div>
