@@ -2,7 +2,7 @@
 <div class="container">
     <div class="container__left" >
       
-        <h1 class="md-headline" style="font-family: serif;font: size 100px;">
+        <h1 class="md-headline" style="font-family: serif;font: size 150px;position:top;">
           <span class="color-fundoo-F" style="color:#4285F4">F</span>
           <span class="color-fundoo" style="color:#EA4335">u</span>
           <span class="color-fundoo" style="color:#FBBC05">n</span>
@@ -50,7 +50,7 @@
           <p>
             <mat-form-field appearance="outline">
               <mat-label>Password</mat-label>
-              <input matInput type = "password" autocomplete="off" formControlName="password" />
+              <input matInput type = "password" type="{{ hide ? 'password' : 'text' }}"autocomplete="off" formControlName="password" />
               <mat-error *ngIf="form.controls.password.errors"
                 >*Enter a password</mat-error
               >
@@ -61,7 +61,7 @@
             </mat-form-field>
             <mat-form-field appearance="outline">
               <mat-label>Confirm Password</mat-label>
-              <input matInput type = "password" autocomplete="off" />
+              <input matInput type = "password"  type="{{ hide ? 'password' : 'text' }}" autocomplete="off" />
             </mat-form-field>
           </p>
         </div>
@@ -70,7 +70,7 @@
         <div class="container__checkbox">
           <span>
             
-            <mat-checkbox color="primary" #password class="example-margin"  >Show password</mat-checkbox>
+           <mat-checkbox color="primary" (change)="TogglePassword()" >Show password</mat-checkbox>
           </span>
         </div>
         <div class="container__buttons">
