@@ -25,14 +25,14 @@ export class RegistraionComponent implements OnInit {
       
     })
   
-    hide : Boolean = true
+    hideme : Boolean = true
     
   
     ngOnInit(): void {
     }
     
     TogglePassword(){
-      this.hide = this.hide ? false : true 
+      this.hideme = this.hideme ? false : true 
     }
     
   
