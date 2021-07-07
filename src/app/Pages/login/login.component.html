@@ -62,16 +62,24 @@
         
    
         <div class="btns">
+          <!-- //<button mat-raised-button disabled >Reset Link</button> -->
+          
           <div class="create">
           
-            <button type="submit" mat-raised-button  ><a routerLink="/registraion">New User </a></button>
+            <button type="submit" mat-raised-button   ><a routerLink="/registraion">New User </a></button>
           
+          
+          </div>
+          <div class="forget">
+          
+            <button type ="submit" mat-raised-button disabled  > <a style="color: #4285F4;"  routerLink="/forgetpassword">Forgot Password</a></button>
           
           </div>
           
           <div class="submit-btn">
           
-          <button type="submit" mat-raised-button>Login</button>
+          <button type="submit" (click)="login()" mat-raised-button>Login</button>
+          
           </div>
        </div>
   </form>

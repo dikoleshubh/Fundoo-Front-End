@@ -17,7 +17,8 @@ export class UserserviceService {
     }
     loginUser(data:any) {
       console.log(" login user services ", data );
-      return this.Https.post('/api/User/login', data,null);
+      return this.Https.post('/User/login', data,null);
+     //return this.Https.post(`${user.url}User/login`, data);
     }
     
 

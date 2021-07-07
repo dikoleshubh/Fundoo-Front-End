@@ -9,7 +9,7 @@ import { UserserviceService } from 'src/app/Services/user/user.service';
   styleUrls: ['./forgetpassword.component.scss']
 })
 export class ForgetpasswordComponent implements OnInit {
-  public Email: string = '@gmail.com';
+  public Email: string = '.com';
   ForgetForm:FormGroup
   constructor(private formBuilder:FormBuilder, public snackBar: MatSnackBar , private userService:UserserviceService) { 
     this.ForgetForm = this.formBuilder.group(

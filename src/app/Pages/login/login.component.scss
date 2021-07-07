@@ -33,6 +33,10 @@ a{
     text-transform: none;
   text-decoration: none;
 }
+a button:second-child{
+  color: #110c0c;
+  background-color: #326aee;
+}
 .mat-focus-indicator, .mat-raised-button .mat-button-base{
   background-color: #3b4ef5ef;
   color: rgb(235, 219, 219);

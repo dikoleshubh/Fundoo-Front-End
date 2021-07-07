@@ -8,6 +8,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { UserserviceService } from 'src/app/Services/user/user.service';
 
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -25,10 +26,10 @@ export class LoginComponent implements OnInit {
     this.loginForm = this.FormBuilder.group(
       {
         Email: new FormControl('', [Validators.required, 
-          Validators.pattern('^[a-zA-Z0-9]+([._+-][a-zA-Z0-9]+)*$')
+         // Validators.pattern('^[a-zA-Z0-9]+([._+-][a-zA-Z0-9]+)*$')
         ]),
         Password:  new FormControl('', [Validators.required, 
-          Validators.pattern('^(?=.{8,20}$)(?=.*[\\d])(?=.*[A-Z])[\\w]*[\\W][\\w]*$')
+          //Validators.pattern('^(?=.{8,20}$)(?=.*[\\d])(?=.*[A-Z])[\\w]*[\\W][\\w]*$')
         ]),}
     );   
     this.isActive = true;
@@ -49,13 +50,16 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-
+    
     
     if(this.loginForm.valid){
+      console.log('SET up');
       this.openSnackBar('Login in...', 0);
       let reqData ={
         Email: this.loginForm.get('Email')?.value+this.Email,
         Password: this.loginForm.get('Password')?.value
+        
+        
       }
       this.Userservice.loginUser(reqData).subscribe(
         (response: any) => {
