@@ -19,6 +19,7 @@ import { RegistraionComponent } from './Pages/registraion/registraion.component'
 //import { RegistersComponent } from './registers/registers.component';
 import {MatIconModule} from '@angular/material/icon';
 import { ForgetpasswordComponent } from './Pages/forgetpassword/forgetpassword.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
@@ -28,7 +29,8 @@ import { ForgetpasswordComponent } from './Pages/forgetpassword/forgetpassword.c
     AppComponent,
     LoginComponent,
     RegistraionComponent,
-    ForgetpasswordComponent
+    ForgetpasswordComponent,
+    DashboardComponent
     //RegistersComponent
     
   ],
