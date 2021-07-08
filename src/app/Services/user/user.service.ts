@@ -25,7 +25,7 @@ export class UserserviceService {
     
   forgetUser(data:any) {
     console.log(" forget user services ", data );
-    return this.Https.post('/Users/ForgetPassword', data,null);
+    return this.Https.post('/User/ForgetPassword', data,null);
   }
     
   
@@ -34,7 +34,7 @@ export class UserserviceService {
     let headers = new HttpHeaders()
     .set('Authorization', 'Bearer '+localStorage.getItem('FunDooNotesJWT'));  
     let options = { headers: headers };
-    return this.Https.post('/Users/Resetpassword', data,options);
+    return this.Https.post('/User/Resetpassword', data,options);
   }
   authenticateUser(){
     // const token = localStorage.getItem("FunDooNotesJWT")

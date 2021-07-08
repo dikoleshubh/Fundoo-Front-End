@@ -1,1 +1,119 @@
-<p>dashboard works!</p>
+<mat-toolbar class="docs-navbar-header">
+  <mat-toolbar-row>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <div class="Main">
+      <div class="sideNavIcon">
+        <div>
+
+          <mat-icon (click)="drawer.toggle()" >menu</mat-icon>
+
+        </div>
+        <div >
+          <img src="assets/images/keep.png" width="50" height="50" alt="Fundoo Notes" style="padding-left: 20%;">
+        </div>
+
+        <div><h1 class="md-headline" style="font-family: 'Google Sans','Noto Sans Myanmar UI',arial,sans-serif;font: size 150px;padding-left: 45%;">
+          <span class="color-fundoo-F" style="color:#4285F4 " >F</span>
+          <span class="color-fundoo" style="color:#EA4335">u</span>
+          <span class="color-fundoo" style="color:#FBBC05">n</span>
+          <span class="color-fundoo" style="color:#4285F4">d</span>
+          <span class="color-fundoo" style="color:#34A853">o</span>
+          <span class="color-fundoo" style="color:#EA4335">o</span>
+          
+          </h1></div>
+
+      </div>
+
+      <div class="searchWhole">
+
+
+        <div class="searchbar">
+          <div class="searchIcon">
+            <mat-icon matSuffix>search</mat-icon>
+          </div>
+          <div>
+            <input class="input" matInput type="searchbar" placeholder="  Search..." style="width: 235%;">
+          </div>
+        </div>
+
+        <div class="appBarLastIcon" style="justify-content: space-between;">
+          <div class="refresh">
+            <div id="refreshbutton" mat-icon-button>
+              <mat-icon>refresh</mat-icon>
+            </div>
+            <div mat-icon-button st>
+              <mat-icon>
+                view_agenda
+              </mat-icon>
+            </div>
+          </div>
+
+
+          <div mat-icon-button style="justify-content: space-between;">
+            <mat-icon>
+              account_circle
+            </mat-icon>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </mat-toolbar-row>
+
+</mat-toolbar>
+
+
+
+
+<!-- <div>
+  <router-outlet></router-outlet>
+</div> -->
+
+ <div class="sidenavdiv">
+  <mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <div class="maindiv">
+
+
+        <div class="notesdiv">
+
+          <div class="notes" routerLink="notes">
+            <mat-icon>note_add</mat-icon>
+            New Note
+          </div>
+
+          <div class="reminder">
+            <mat-icon>alarm_add</mat-icon>
+            Remainder
+          </div>
+
+        </div>
+        
+        <div class="labelmain">
+
+          
+
+          <div>
+            <mat-icon>edit</mat-icon>
+            Edit labels
+          </div>
+
+        </div>
+
+        <div class="trashmain">
+          <div class="archieve">
+            <mat-icon>archive</mat-icon>
+              Archive
+          </div>
+          <div class="trash">
+            <mat-icon>delete_sweep</mat-icon>
+            Trash
+          </div>
+        </div>
+      </div>
+    </mat-drawer>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-container>
+</div> 

@@ -19,8 +19,11 @@ import { RegistraionComponent } from './Pages/registraion/registraion.component'
 //import { RegistersComponent } from './registers/registers.component';
 import {MatIconModule} from '@angular/material/icon';
 import { ForgetpasswordComponent } from './Pages/forgetpassword/forgetpassword.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-//import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardComponent } from './Pages/dashboard/dashboard.component';
+//import { HomeComponent } from './home/home.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatDividerModule} from '@angular/material/divider';
+
 
 
 
@@ -32,7 +35,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     RegistraionComponent,
     ForgetpasswordComponent,
     DashboardComponent,
-   // DashboardComponent
+    //SidenavigatorComponent,
+   // HeaderComponent,
+    
+    
     //RegistersComponent
     
   ],
@@ -48,9 +54,11 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HttpClientModule,
     MatFormFieldModule,
     MatInputModule,
-    MatInputModule,
+    MatIconModule,
     MatCheckboxModule,
-     MatButtonModule
+     MatButtonModule,
+     MatSidenavModule,
+    MatDividerModule
     
     
   ],
