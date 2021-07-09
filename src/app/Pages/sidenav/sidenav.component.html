@@ -1,0 +1,48 @@
+<div class="sidenavdiv">
+    <mat-drawer-container class="example-container" autosize>
+      <mat-drawer #drawer class="example-sidenav" mode="side">
+        <div class="maindiv">
+  
+  
+          <div class="notesdiv">
+  
+            <div class="notes" routerLink="notes">
+              <mat-icon>note_add</mat-icon>
+              New Note
+            </div>
+  
+            <div class="reminder">
+              <mat-icon>alarm_add</mat-icon>
+              Remainder
+            </div>
+  
+          </div>
+          
+          <div class="labelmain">
+  
+            
+  
+            <div>
+              <mat-icon>edit</mat-icon>
+              Edit labels
+            </div>
+  
+          </div>
+  
+          <div class="trashmain">
+            <div class="archieve">
+              <mat-icon>archive</mat-icon>
+                Archive
+            </div>
+            <div class="trash">
+              <mat-icon>delete_sweep</mat-icon>
+              Trash
+            </div>
+          </div>
+        </div>
+      </mat-drawer>
+      <div>
+        <router-outlet></router-outlet>
+      </div>
+    </mat-drawer-container>
+  </div> 

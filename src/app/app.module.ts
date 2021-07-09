@@ -23,6 +23,8 @@ import { DashboardComponent } from './Pages/dashboard/dashboard.component';
 //import { HomeComponent } from './home/home.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatDividerModule} from '@angular/material/divider';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { NotehomeComponent } from './notehome/notehome.component';
 
 
 
@@ -35,6 +37,8 @@ import {MatDividerModule} from '@angular/material/divider';
     RegistraionComponent,
     ForgetpasswordComponent,
     DashboardComponent,
+    SidenavComponent,
+    NotehomeComponent,
     //SidenavigatorComponent,
    // HeaderComponent,
     
