@@ -51,7 +51,7 @@ export class LoginComponent implements OnInit {
 
   login() {
     
-    
+    //Token Validation Process Model
     if(this.loginForm.valid){
       console.log('SET up');
       this.openSnackBar('Login in...', 0);

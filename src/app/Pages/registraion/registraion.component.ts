@@ -18,10 +18,10 @@ export class RegistraionComponent implements OnInit {
      }
   
     form = new FormGroup({
-      firstName: new FormControl('', [Validators.required, Validators.minLength(1)]),
-      lastName: new FormControl('', [Validators.required, Validators.minLength(1)]),
-      email: new FormControl('', [Validators.required, Validators.email, Validators.minLength(1)]),
-      password: new FormControl('', [Validators.required, Validators.minLength(1)])
+      FirstName: new FormControl('', [Validators.required, Validators.minLength(1)]),
+      LastName: new FormControl('', [Validators.required, Validators.minLength(1)]),
+      Email: new FormControl('', [Validators.required, Validators.email, Validators.minLength(1)]),
+      Password: new FormControl('', [Validators.required, Validators.minLength(1)])
       
     })
   
@@ -41,7 +41,7 @@ export class RegistraionComponent implements OnInit {
     }
   
     passType: string = 'password';
-
+// Password Showcase 
     toggleshow(){
     if(this.passType== 'password'){
     this.passType= 'text'
@@ -49,7 +49,7 @@ export class RegistraionComponent implements OnInit {
     this.passType== 'password'
     }
     }
-  
+  //Submit Model
     submit() {
       console.log(this.form.valid);
       if (this.form.valid){

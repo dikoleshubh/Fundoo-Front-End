@@ -1,0 +1,61 @@
+<mat-accordion>
+  <mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<div class="layout">
+
+
+
+  <form [formGroup]="notesForm">
+    <mat-card-title >
+    <h3 style="font-size: 200%; margin-left: 20%;">{{editData ? "Edit note " : "Create new note"}}</h3>
+
+    </mat-card-title>
+    <!-- Text Area -->
+    <div>
+      <input
+        class="text-area"
+        type="text"
+        placeholder="Title"
+        formControlName="noteText"
+      />
+      <input
+      class="text-area"
+      type="text"
+      placeholder="Description"
+      formControlName="noteText"
+      />
+    </div>
+
+
+<!-- View Notes Edit notes Delete Notes-->
+
+    <select formControlName="noteColor" class="color-select">
+     
+      <option value="null" disabled>Select color...</option>
+      <option *ngFor="let color of noteColorList" [value]="color">{{color}}
+      </option>
+      
+    </select>
+    <button  class="add-btn" (click)="saveNote()" [disabled]="notesForm.invalid" style="width: 20%; height: 10%;background-color: white;" mat-rasied-button>
+      <!-- {{editData ? "Edit " : "Add"}} --><mat-icon> border_color</mat-icon>
+    </button>
+  
+  </form>
+
+
+  <h3 *ngIf="notesList.length > 0">Notes list:</h3>
+
+  
+  <div *ngFor="let note of notesList" style="width: 50% ;">
+   <div [ngStyle]="{'background-color': note.noteColor}" class="notes-area" style="height: 60%;" >
+    <span class="notes-text">{{note.noteText}}</span>
+    <button  mat-mini-fab class="notes-btn" (click)="editNote(note)">	<mat-icon>edit</mat-icon></button>
+    <button  mat-mini-fab  class="notes-btn" (click)="deleteNote(note.id)">	<mat-icon>delete_sweep</mat-icon></button>
+   </div>
+  </div>
+</div>
+
+</mat-expansion-panel-header>
+  </mat-expansion-panel>
+</mat-accordion>

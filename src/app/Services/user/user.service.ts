@@ -21,7 +21,8 @@ export class UserserviceService {
      //return this.Https.post(`${user.url}User/login`, data);
     }
     
-
+    
+  
     
   forgetUser(data:any) {
     console.log(" forget user services ", data );
@@ -42,4 +43,6 @@ export class UserserviceService {
     // return !isExpired;
     return !!localStorage.getItem("FunDooNotesJWT")
   }
+  
+ 
 }

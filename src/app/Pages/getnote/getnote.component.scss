@@ -1,0 +1,30 @@
+.main-container {
+    margin-left: -200px;
+    
+  }
+  
+  .display-box {
+    margin-top: 1%;
+    min-height: 100px;
+    width: 250px;
+    border-radius: 4%;
+    border: 1px solid lightgray;
+  
+    input {
+      margin-left: 5%;
+      width: 80%;
+      margin-top: 5%;
+      border: none;
+    }
+  
+    textarea {
+      margin-left: 5%;
+      width: 80%;
+      border: none;
+      resize: none;
+    }
+  
+    .icons{
+      padding-top: 50px;
+    }
+  }

@@ -8,13 +8,6 @@ import { MediaMatcher } from '@angular/cdk/layout';
 
 
 
-// ClarityIcons.addIcons(lightbulbIcon);
-// ClarityIcons.addIcons(bellIcon);
-// ClarityIcons.addIcons(pencilIcon);
-// ClarityIcons.addIcons(archiveIcon);
-// ClarityIcons.addIcons(trashIcon);
-// ClarityIcons.addIcons(cogIcon);
-// ClarityIcons.addIcons(barsIcon);
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
