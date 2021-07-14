@@ -18,10 +18,10 @@ export class RegistraionComponent implements OnInit {
      }
   
     form = new FormGroup({
-      FirstName: new FormControl('', [Validators.required, Validators.minLength(1)]),
-      LastName: new FormControl('', [Validators.required, Validators.minLength(1)]),
-      Email: new FormControl('', [Validators.required, Validators.email, Validators.minLength(1)]),
-      Password: new FormControl('', [Validators.required, Validators.minLength(1)])
+      firstName: new FormControl('', [Validators.required, Validators.minLength(1)]),
+      lastName: new FormControl('', [Validators.required, Validators.minLength(1)]),
+      email: new FormControl('', [Validators.required, Validators.email, Validators.minLength(1)]),
+      password: new FormControl('', [Validators.required, Validators.minLength(1)])
       
     })
   

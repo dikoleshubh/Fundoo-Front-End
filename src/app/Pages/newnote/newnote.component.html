@@ -1,61 +1,88 @@
-<mat-accordion>
-  <mat-expansion-panel hideToggle>
-    <mat-expansion-panel-header>
+
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<div class="layout">
+      <!-- <mat-card-title >
+        <h3 style="font-size: 200%; margin-left: 20%;">{{editData ? "Edit note " : "Create new note"}}</h3>
+    
+        </mat-card-title>
+         -->
+     
 
 
 
-  <form [formGroup]="notesForm">
-    <mat-card-title >
-    <h3 style="font-size: 200%; margin-left: 20%;">{{editData ? "Edit note " : "Create new note"}}</h3>
 
-    </mat-card-title>
+
+
+
+
+         
+        
+  <div class="layout">
+   
+
+
+
+    <form [formGroup]="notesForm">
+    
+      
     <!-- Text Area -->
-    <div>
+     <div>
+     <mat-form-field class="titles" appearence="outline" style="margin-left:30%; width: 40%;;">
       <input
         class="text-area"
         type="text"
+        matInput
         placeholder="Title"
-        formControlName="noteText"
+        id="Title"
+        formControlName="noteTitle"
       />
+    </mat-form-field>
+    
+      </div>
+    
+    
+      <div>
+        <mat-form-field class="des" appearence="outline" style="margin-left: 30%; width:40%;" >
       <input
       class="text-area"
       type="text"
+      matInput
       placeholder="Description"
       formControlName="noteText"
       />
+        </mat-form-field>
     </div>
+    
+    </form>
+  
+ 
 
 
-<!-- View Notes Edit notes Delete Notes-->
 
-    <select formControlName="noteColor" class="color-select">
-     
-      <option value="null" disabled>Select color...</option>
-      <option *ngFor="let color of noteColorList" [value]="color">{{color}}
-      </option>
-      
-    </select>
-    <button  class="add-btn" (click)="saveNote()" [disabled]="notesForm.invalid" style="width: 20%; height: 10%;background-color: white;" mat-rasied-button>
+    <button   mat-button disabled class="add-btn" (click)="saveNote()" [disabled]="notesForm.invalid" style="width: 10%; height: 10%;">
       <!-- {{editData ? "Edit " : "Add"}} --><mat-icon> border_color</mat-icon>
     </button>
   
-  </form>
+  <div class="container" style="display: flex; flex-wrap: wrap;" *ngIf="notesList.length > 0">
 
-
-  <h3 *ngIf="notesList.length > 0">Notes list:</h3>
+  <!-- <h3 >Notes list:</h3> -->
 
   
   <div *ngFor="let note of notesList" style="width: 50% ;">
-   <div [ngStyle]="{'background-color': note.noteColor}" class="notes-area" style="height: 60%;" >
+    
+   <div  class="notes-area" style="height: 60%; margin-top: 10%;" >
+   
+    <div class="Title-area">  <span class="notes-text" style="font-weight: bold;">{{note.noteTitle}}</span> </div>
     <span class="notes-text">{{note.noteText}}</span>
-    <button  mat-mini-fab class="notes-btn" (click)="editNote(note)">	<mat-icon>edit</mat-icon></button>
-    <button  mat-mini-fab  class="notes-btn" (click)="deleteNote(note.id)">	<mat-icon>delete_sweep</mat-icon></button>
+    <button  mat-mini-fab   class="notes-btn" (click)="editNote(note)">	<mat-icon>edit</mat-icon></button>
+    <button  mat-mini-fab    class="notes-btn" (click)="deleteNote(note.id)">	<mat-icon>delete_sweep</mat-icon></button>
    </div>
+ 
   </div>
+ 
 </div>
 
-</mat-expansion-panel-header>
-  </mat-expansion-panel>
-</mat-accordion>
+
+
+
+
+  

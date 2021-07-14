@@ -2,18 +2,25 @@
   margin: 2rem;
 }
 
-.text-area, .color-select {
+.text-area{
   display: block;
 }
 
 .text-area {
-  width: 600px;
-  height: 50px;
+  width: 300px;
+  height: 10px;
   margin-left: 25%;
 
 }
 .notesForm{
   margin-left: 25%;
+}
+
+.icon{
+  cds-icon{
+      //margin: 5px;
+      size: 400px;
+  }
 }
 
  .color-select{
@@ -27,18 +34,30 @@
 }
 
  .notes-btn {
-  background-color: rgb(255, 255, 255);
-  border: none;
-  cursor: pointer;
-  color: rgb(69, 28, 255);
+  //background-color: khaki;
+  border-radius: 35px;
+
+  color: rgb(21, 20, 24);
   margin-left: 40%;
+  
   
   
   
 }
-.add-btn{
+
+.note-title{
+  width: 40%;
+  height: 30%;
   color: black;
-  margin-left: 40%;
+  font-weight: bold;
+
+}
+.add-btn{
+  color: rgb(253, 249, 249);
+  margin-top: 2%;
+  margin-left: 65%;
+  //background-color: rgb(94, 131, 253);
+  
   
 
 
@@ -47,18 +66,23 @@
 .notes-area {
   padding: 0.5rem;
   display: flex;
-  flex-direction: row;
-  background-color: khaki;
+  flex-wrap: wrap;
+ background-color: rgb(248, 248, 247);
+  color: rgb(3, 3, 3);
+  padding-top: 5%;
+  box-shadow: 0 4px 8px 0 rgba(204, 202, 202, 0.2), 0 6px 20px 0 rgba(202, 201, 201, 0.19);
+  
+  
 }
 
 .notes-text {
-  width: 30%;
+  //width: 30%;
   align-self: center;
   
-  min-height: 100px;
+  min-height: 180px;
   padding: 10px;
   margin: 10px;
-  width: 100px;
+  width: 250px;
   
 }
 

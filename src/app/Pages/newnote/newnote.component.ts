@@ -6,10 +6,20 @@ import { NotesService } from 'src/app/Services/notes/notes.service';
 //import { NoteServiceService } from 'src/app/Services/notes/notes.service';
 import { UserserviceService } from 'src/app/Services/user/user.service';
 
+import { ClarityIcons,trashIcon,bellIcon,userIcon,colorPaletteIcon,imageGalleryIcon,archiveIcon,ellipsisVerticalIcon } from '@cds/core/icon';
+
+ClarityIcons.addIcons(trashIcon);
+ClarityIcons.addIcons(bellIcon);
+ClarityIcons.addIcons(userIcon);
+ClarityIcons.addIcons(colorPaletteIcon);
+ClarityIcons.addIcons(imageGalleryIcon);
+ClarityIcons.addIcons(archiveIcon);
+ClarityIcons.addIcons(ellipsisVerticalIcon);
 
 export interface NoteItem {
   id: number;
   noteText: string;
+  noteTitle:string;
   noteColor: string;
 }
 
@@ -19,8 +29,9 @@ export interface NoteItem {
   styleUrls: ['./newnote.component.scss']
 })
 export class NewnoteComponent    {
+  panelOpenState = false;
   public notesForm: FormGroup;
-  public noteColorList: string[] = ['Red', 'Yellow', 'Blue ']
+
   public notesList: NoteItem[] = [];
   public editData!: NoteItem;
 
@@ -32,7 +43,8 @@ export class NewnoteComponent    {
     return this.fb.group({
       id: [''],
       noteText: ['', [Validators.required]],
-      noteColor: [null, [Validators.required]]
+      noteTitle: ['', [Validators.required]],
+      
     });
   }
 
@@ -53,7 +65,7 @@ export class NewnoteComponent    {
     this.notesForm.setValue({
       id: editNoteData.id,
       noteText: editNoteData.noteText,
-      noteColor: editNoteData.noteColor
+      noteTitle: editNoteData.noteTitle,
     });
   }
 
